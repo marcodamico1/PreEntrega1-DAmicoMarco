@@ -12,35 +12,33 @@ function calcular_descuento( costo ){
 
 
 
-function calcular_costo( costo, cuotas ){
+function calcular_costo( costo, cuotas_usuario ){
 
-    cuotas = parseInt(cuotas)
+    cuotas_usuario = parseInt(cuotas)
 
     let costo_final = 0
 
-    if(cuotas == 1){
+    if(cuotas_usuario == 1){
         costo_final = costo
         return costo_final
     }
-    else if(cuotas == 3){
+    else if(cuotas_usuario == 3){
         costo_final = costo + (costo * 0.25)
         return costo_final
     }
-    else if(cuotas == 6){
+    else if(cuotas_usuario == 6){
         costo_final = costo + (costo * 0.5)
         return costo_final
     }
-    else if(cuotas == 12){
+    else if(cuotas_usuario == 12){
         costo_final = costo + (costo * 0.75)
         return costo_final
     }
-    else if(cuotas == 18){
+    else if(cuotas_usuario == 18){
         costo_final = costo + (costo * 1)
         return costo_final
     }
 }
-
-
 
 
 
@@ -69,9 +67,11 @@ while( menu != "salir"){
 
     let producto = prompt ("¿Que articulo desea adquirir?\n Vacuum = $500\n Smartwatch = $100\n Camera = $600\n Smartlight = $50\n");
 
+    console.log("Seleccionaste el producto:" , producto);
+
     let metodo_de_pago = prompt ("Seleccione el metodo de pago: Efectivo, Cuotas o Criptomonedas")
 
-
+    
 
 
 // Efectivo (con descuento del 10%) //
